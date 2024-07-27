@@ -1,0 +1,8 @@
+Question 1: Which model did the best for the colour-prediction task? Can you give a theory about why? Do you have any theory about why RGB/LAB/HSV worked better for different models?
+Answer 1: The model that did the best for the colour-prediction task is rf_convert_model(Random Forest Classifier). Since Random Forest is an ensemble of decision trees with randomness where all the trees are different, put many of them together and have a vote, it reduces overfitting as well so it makes sense for the rf_convert_model to do best among other two (Naive Bayes and KNN). 
+LAB is better than RGB because feature scaling is used in LAB which is exactly what the question demands. By looking at the plot it can be said that LAB is a nice approximation of the colors which helps in better scaling.
+
+
+Question 2: Have a look at the cities in your validation data where the weather model makes the wrong prediction. Do you feel like the model is making reasonable mistakes? Can you think of any weather features that we could potentially add to make better predictions?
+Answer 2: Yes, the reasonable mistakes made by the model are due to fact that some cities have a similar kind of weather and the tmax, tmin etc features predict them wrong or maybe the wrongly predicted cities are close to the actual city. In this model the features used are tmin, tmax, precipitation, snowfall and snow depth. In my opinion average temperature would be a better feature along with rainfall that could make better predictions.
+
