@@ -1,0 +1,7 @@
+Question 1: Looking at your dog-rates.ipynb, do you think the residual are close-enough to being normal to look at the OLS p-value? Can you reasonably conclude that the ratings are increasing?
+Answer 1: No, I don't think the residual are close enough to being normal because p value of residual normal test is p < 0.05 and It is very small so it can not be close-enough to being normal. Moreover looking at histogram tells us the data is left skewed. 
+No, since the normality test fails it can not be concluded that ratings are increasing because there is no way we can do the OLS test because data is not normal and we need normal data set to perform the test.
+
+
+Question 2: Do you think that the new “better” prediction is letting the Kalman filter do a better job capturing the true signal in the noise?
+Answer 2: Yes, the new better prediction is letting the Kalman filter do a better job because instead of taking into account only temperature(Exercise 3), we took the transition matrix such that every noise is captured by the data and the predictions are based on all of the factors instead of just one factor.
