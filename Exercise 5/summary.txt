@@ -1,0 +1,78 @@
+Summary Statistics for Data 1:
+            x           y
+mean     8.717696   12.522874
+std     12.155517    6.639964
+min    -22.635878   -2.565088
+max     35.237055   27.384153
+
+Correlation Coefficient: 0.9503256954375483
+
+Description: Since the correlation coefficient is close to 1, it indicates a lot of linear relationship between the variables i.e, larger y happens with larger x.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Summary Statistics for Data 2:
+            x           y
+mean    -0.710787   -0.748987
+std     11.481584    6.257918
+min    -33.271113  -18.621804
+max     27.647000   14.147315
+
+Correlation Coefficient: 0.9551531665750373
+
+Description: Since the correlation coefficient is close to 1, it indicates a lot of linear relationship between the variables i.e, larger y happens with larger x.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Summary Statistics for Data 3:
+            x           y
+mean     0.968907    8.508535
+std      2.235558    1.149301
+min     -2.449064    6.641734
+max      4.518885   10.551871
+
+Correlation Coefficient: 0.9819372646760661
+
+Description: Since the correlation coefficient is close to 1, it indicates a lot of linear relationship between the variables i.e, Larger y happens with larger x.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Summary Statistics for Data 4:
+            x           y
+mean    49.905086   18.553837
+std     28.508611   16.545896
+min      0.000000    0.000000
+max     87.376700   44.565040
+
+Correlation Coefficient: -0.08119306735490815
+
+Description: Since the correlation coefficient is close to 0, it indicates a little to no linear relationship between the variables.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Summary Statistics for Data 5:
+            x           y
+mean    49.909994   18.555525
+std     28.500001   16.540796
+min      4.337892    0.055498
+max     91.052863   49.934197
+
+Correlation Coefficient: -0.08823598983058886
+
+Description: Since the correlation coefficient is close to 0, it indicates a little to no linear relationship between the variables.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Summary Statistics for Data 6:
+            x           y
+mean     7.216155    7.602215
+std     11.921599   11.764382
+min    -24.333821  -22.956357
+max     35.402139   36.079874
+
+Correlation Coefficient: 0.9350685662094905
+
+Description: Since the correlation coefficient is close to 1, it indicates a lot of linear relationship between the variables i.e, Larger y happens with larger x.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
