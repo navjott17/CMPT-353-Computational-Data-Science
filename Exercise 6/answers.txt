@@ -1,0 +1,11 @@
+Question 1. In the A/B test analysis, do you feel like we're p-hacking? How comfortable are you coming to a conclusion at p<0.05?
+Answer 1. Yes, In the A/B test analysis we are p-hacking when we calculate the p value for instructors only. When odd and even uid user searches were calculated they were p>0.05 but then the data is manipulated for instructors only and the p-value for ANOVA testing is approximately equal to 0.05 but for Mann Whitney U-test the p-value is < 0.05 so yes, we are p-hacking. I dont think there was any need to manipulate the data just for the sake of p-value < 0.05 because we are ignoring a large part of data as discussed in Bad thing part of Hacking p-value in lecture notes. 
+
+
+Question 2. If we had done T-tests between each pair of sorting implementation results, how many tests would we run? If we looked for p<0.05 in them, what would the probability be of having any false conclusions, just by chance? That's the effective p-value of the many-T-tests analysis. [We could have done a Bonferroni correction when doing multiple T-tests, which is a fancy way of saying “for m tests, look for significance at α/m”.]
+Answer 2. There are total 7 sorting algorithms and each and every one is paired with the others for the T-test, i.e, 7*6 = 42 but this overcounts the tests by a factor of 2 so 42/2 = 21 tests should be run if T-tests between each pair of sorting implementation was performed. The probability of false conclusions, just by chance can be calculated by 1 - incorrect rejection(0.95)^21 = 1-0.3406 = 0.6594 = 0.66, hence there is a 66% probability of having any false conclusions. 
+
+
+Question 3. Give a ranking of the sorting implementations by speed, including which ones could not be distinguished. (i.e. which pairs could our experiment not conclude had different running times?)
+Answer 3. Ranking of sorting implementations by speed: partition_sort > qs1 > qs4 > qs5 > qs2 > qs3 > merge1. (via post_hoc.plot_simultaneous())
+The indistinguishable pairs: (merge1, qs3), (qs2, qs3), (qs4, qs5) (as noted by the latest random data calculated)
