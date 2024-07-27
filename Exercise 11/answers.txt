@@ -1,0 +1,11 @@
+Question 1: In your reddit_relative.py, what intermediate results did you .cache()? Briefly describe what would have happened if you hadn't used .cache() anywhere. (No need to time it, unless you really want to.)
+Answer 1: In my reddit_relative.py, the.cache() is used 2 times.
+            1. for data because data is loaded once to groupby and second to join it with averages_by_score.
+            2. for new_data because new_data is used two times to groupby the data.
+          If .cache() wasn't used in any of the dataframe then it would have taken more time to load the data twice. In order to decrease the time taken .cache() is used so that we have the data readily available when it is being used more than once.
+
+
+Question 2: How did marking DataFrames for broadcast affect the running time of the “best author” program above?
+Answer 2: with broadcast(), the running time is: 1min 16.561s
+          without broadcast(), the running time: 1min 23.655s
+          Broadcasting a data means sending the copy of the data that is being broadcast i.e, smaller dataframe to every executor so that it just have to lookup for every row of larger dataframe by avoiding the horrible shuffling of data and converting it into a simple pipeline operation, hence taking less time.
