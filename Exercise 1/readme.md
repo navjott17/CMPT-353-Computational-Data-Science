@@ -1,6 +1,7 @@
 Exercise 1
 
-#Getting Started with NumPy
+# Getting Started with NumPy
+
 The NumPy data archive monthdata.npz file (in the e1.zip linked above) has two arrays containing information about precipitation in Canadian cities (each row represents a city) by month (each column is a month Jan–Dec of a particular year). The arrays are the total precipitation observed on different days, and the number of observations recorded. You can get the NumPy arrays out of the data file like this:
 
 data = np.load('monthdata.npz')
@@ -14,7 +15,7 @@ Do the same for the cities: give the average precipitation (daily precipitation 
 Calculate the total precipitation for each quarter in each city (i.e. the totals for each station across three-month groups). You can assume the number of columns will be divisible by 3. Hint: use the reshape function to reshape to a 4n by 3 array, sum, and reshape back to n by 4.
 Write a Python program np_summary.py that produces the values specified here. Its output (with print()) should exactly match the provided np_summary.txt. We will test it on a different set of inputs: your code should not assume there is a specific number of weather stations. You can assume that there is exactly one year (12 months) of data.
 
-#Getting Started with Pandas
+# Getting Started with Pandas
 To get started with Pandas, we will repeat the analysis we did with Numpy. Pandas is more data-focussed and is more friendly with its input formats. We can use nicely-formatted CSV files, and read it into a Pandas dataframe like this:
 
 totals = pd.read_csv('totals.csv').set_index(keys=['name'])
@@ -24,7 +25,7 @@ Reproduce the values you calculated with NumPy, except the quarterly totals, whi
 
 Write a Python program pd_summary.py that produces the values specified here. Its output should exactly match the provided pd_summary.txt.
 
-#Analysis with Pandas
+# Analysis with Pandas
 The data in the provided files had to come from somewhere. What you got started with 180MB of data for 2016 from the Global Historical Climatology Network. To get the data down to a reasonable size, filtered out all but a few weather stations and precipitation values, joined in the names of those stations, and got the file provided as precipitation.csv.
 
 The data in precipitation.csv is a fairly typical result of joining tables in a database, but not easy to analyse as you did above.
@@ -37,7 +38,7 @@ Use the Pandas pivot method to create a row for each station (name) and column f
 Repeat with the 'count' aggregation to get the count of observations.
 When you submit, make sure your code is using the pivot_months_pandas function you wrote.
 
-#Timing Comparison
+# Timing Comparison
 Use the provided timing.ipynb notebook to test your function against the pivot_months_loops function that I wrote. (It should import into the notebook as long as you left the main function and __name__ == '__main__' part intact.)
 
 The notebook runs the two functions and ensures that they give the same results. It also uses the %timeit magic (which uses Python timeit) to do a simple benchmark of the functions.
