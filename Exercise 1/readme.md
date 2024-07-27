@@ -26,6 +26,7 @@ Write a Python program np_summary.py that produces the values specified here. It
 To get started with Pandas, we will repeat the analysis we did with Numpy. Pandas is more data-focussed and is more friendly with its input formats. We can use nicely-formatted CSV files, and read it into a Pandas dataframe like this:
 
 totals = pd.read_csv('totals.csv').set_index(keys=['name'])
+
 This is the same data, but has the cities and months labelled, which is nicer to look at.
 
 Reproduce the values you calculated with NumPy, except the quarterly totals, which are a bit of a pain. The difference will be that you can produce more informative output, since the actual months and cities are known. When you print a Pandas DataFrame or series, the format will be nicer.
@@ -40,9 +41,13 @@ The data in precipitation.csv is a fairly typical result of joining tables in a 
 Create a program monthly_totals.py that recreates the totals.csv, counts.csv, and monthdata.npz files as you originally got them. The provided monthly_totals_hint.py provides an outline of what needs to happen. You need to fill in the pivot_months_pandas function (and leave the other parts intact for the next part).
 
 Add a column 'month' that contains the results of applying the date_to_month function to the existing 'date' column. [You may have to modify date_to_month slightly, depending how your data types work out. ]
+
 Use the Pandas groupby method to aggregate over the name and month columns. Sum each of the aggregated values to get the total. Hint: grouped_data.aggregate({'precipitation': 'sum'}).reset_index()
+
 Use the Pandas pivot method to create a row for each station (name) and column for each month.
+
 Repeat with the 'count' aggregation to get the count of observations.
+
 When you submit, make sure your code is using the pivot_months_pandas function you wrote.
 
 # Timing Comparison
