@@ -5,14 +5,21 @@ Exercise 1
 The NumPy data archive monthdata.npz file (in the e1.zip linked above) has two arrays containing information about precipitation in Canadian cities (each row represents a city) by month (each column is a month Jan–Dec of a particular year). The arrays are the total precipitation observed on different days, and the number of observations recorded. You can get the NumPy arrays out of the data file like this:
 
 data = np.load('monthdata.npz')
+
 totals = data['totals']
+
 counts = data['counts']
+
 Use this data to find these things:
 
 Which city had the lowest total precipitation over the year? Hints: sum across the rows (axis 1); use argmin to determine which row has the lowest value. Print the row number.
+
 Determine the average precipitation in these locations for each month. That will be the total precipitation for each month (axis 0), divided by the total observations for that months. Print the resulting array.
+
 Do the same for the cities: give the average precipitation (daily precipitation averaged over the month) for each city by printing the array.
+
 Calculate the total precipitation for each quarter in each city (i.e. the totals for each station across three-month groups). You can assume the number of columns will be divisible by 3. Hint: use the reshape function to reshape to a 4n by 3 array, sum, and reshape back to n by 4.
+
 Write a Python program np_summary.py that produces the values specified here. Its output (with print()) should exactly match the provided np_summary.txt. We will test it on a different set of inputs: your code should not assume there is a specific number of weather stations. You can assume that there is exactly one year (12 months) of data.
 
 # Getting Started with Pandas
