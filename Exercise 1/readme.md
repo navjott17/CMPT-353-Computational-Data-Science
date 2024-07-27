@@ -57,8 +57,10 @@ The notebook runs the two functions and ensures that they give the same results.
 
 Run the notebook. Make sure all is well, and compare the running times of the two implementations.
 
-#Questions
+# Questions
+
 Answer these questions in a file answers.txt. [Generally, these questions should be answered in a few sentences each.]
 
 Where you did the same calculations with NumPy and Pandas, which did you find easier to work with? Which code do you think is easier to read?
+
 What were the running times of the two pivot_months_* functions? How can you explain the difference?
