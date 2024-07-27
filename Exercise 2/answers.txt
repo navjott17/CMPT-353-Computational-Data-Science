@@ -1,0 +1,11 @@
+Question 1: In the hint above, what is the result of the calculation data['timestamp']*fit.slope + fit.intercept? What is the type, and describe the values.
+
+Answer 1: As described in the code by line "data['prediction'] = data['timestamp']*fit.slope + fit.intercept", the result of this calculation is the predicted value of ratings of the dog rate data. 
+The type of this calculation is float64.
+The values timestamp, slope and intercept are used to plot the linear line (y = m*x + c), where y = prediction, m = slope, x = timestamp, c = intercept (slope and intercept are calculated using linregress) for a best fit line. (m)fit.slope = 3.515929974847721e-08 and (c)fit.intercept = -40.46415480898916. The plot data['created_at'] vs data['prediction'] gives a linear line using the above discussed values. 
+
+
+Question 2: In the same hint, why does this produce a fit line on the graph? Why are the created_at values and timestamp values paired correctly to make points on the plot?
+
+Answer 2: This produce a fit line on the graph because prediction is calculated using a line equation: y = m*x + c, where x = data['timestamp'], which is a timestamped value of the date given in the .csv file via column data['created_at'].
+The created_at and timestamp values are paired correctly to make points on the plot because they are related as timestamp value is calculated from the created_at value and then used to calculate prediction which in turn gives a best fit line plot.
